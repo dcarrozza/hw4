@@ -1,9 +1,9 @@
 
-let url = "http://ws.audioscrobbler.com/2.0/?method=geo.gettoptracks&country=united%20states&api_key=6d5b312a15cc01ff5104a98e9cd8f04a&format=json"
-  // console.log(url)
+let url = "https://ws.audioscrobbler.com/2.0/?method=geo.gettoptracks&country=united%20states&api_key=6d5b312a15cc01ff5104a98e9cd8f04a&format=json"
+  console.log(url)
 
   $.get(url, function(data) {
-    // console.log(data);
+    console.log(data);
     let song1 = data.tracks.track[0].name
     let artist1 = data.tracks.track[0].artist.name
   $("#song1").text(song1 + " by " + artist1)
